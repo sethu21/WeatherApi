@@ -21,8 +21,12 @@ public class WeatherController {
     @GetMapping("/weather")
     public ResponseEntity<Map<String, Double>> getWeather(@RequestParam("lat") double latitude, @RequestParam("lon") double longitude) {
         double temperature = weatherService.getTemperature(latitude, longitude);
+        // Create a new HashMap to store response data
         Map<String, Double> response = new HashMap<>();
+        // Add temperature value to the response HashMap with key "temperature"
         response.put("temperature", temperature);
+        // Return the response with HTTP status code 200 OK and the response body containing the HashMap with temperature value
         return ResponseEntity.ok(response);
+
     }
 }

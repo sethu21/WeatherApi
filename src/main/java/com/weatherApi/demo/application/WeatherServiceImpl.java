@@ -1,7 +1,7 @@
 package com.weatherApi.demo.application;
 
 import com.weatherApi.demo.domain.model.Coordinates;
-import com.weatherApi.demo.domain.model.WeatherData;
+
 import com.weatherApi.demo.domain.port.cache.WeatherDataCache;
 import com.weatherApi.demo.domain.port.external.WeatherApiClient;
 import org.springframework.stereotype.Service;

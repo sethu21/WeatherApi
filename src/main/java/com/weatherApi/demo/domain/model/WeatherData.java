@@ -15,6 +15,8 @@ public class WeatherData {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    @Embedded
     private Coordinates coordinates;
     @Column(name = "time")
     private LocalDateTime time;

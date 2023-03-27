@@ -1,5 +1,6 @@
 package com.weatherApi.demo.domain.model;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;
 import jakarta.persistence.Entity;
 import lombok.AllArgsConstructor;
@@ -12,6 +13,8 @@ import java.io.Serializable;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Coordinates implements Serializable {
+    @Column(name ="latitude")
     private Double latitude;
+    @Column(name ="longitude")
     private Double longitude;
 }
